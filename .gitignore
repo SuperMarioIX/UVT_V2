@@ -1,0 +1,7 @@
+__pycache__/
+.pytest_cache
+output_*/
+input/
+debug.log
+.*_debug.log
+todo_idea_list.txt

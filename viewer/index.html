@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>whisper2 · log analyzer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+</head>
+<body>
+
+<!-- =================================================================== -->
+<!-- TOPBAR                                                              -->
+<!-- =================================================================== -->
+<header class="topbar">
+  <div class="brand">
+    <div class="logo">w<span>2</span></div>
+    <div class="brand-text">
+      <h1>whisper<span class="accent">2</span></h1>
+      <p>log analyzer · interactive viewer</p>
+    </div>
+  </div>
+
+  <div class="status-bar" id="statusBar" hidden>
+    <span class="verdict-pill" id="verdictPill">PASS</span>
+    <span class="status-meta" id="statusMeta"></span>
+  </div>
+
+  <div class="actions">
+    <button class="btn-ghost" id="themeToggle" title="Toggle theme (T)">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <button class="btn-ghost" id="searchTrigger" title="Search (/)">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    </button>
+    <button class="btn-primary" id="loadBtn">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+      Load
+    </button>
+    <input type="file" id="fileInput" accept=".json" multiple hidden />
+  </div>
+</header>
+
+<!-- =================================================================== -->
+<!-- LAYOUT                                                              -->
+<!-- =================================================================== -->
+<div class="app" id="app">
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <nav class="tabs" id="tabs">
+      <button class="tab" data-tab="overview">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
+        <span>Overview</span>
+      </button>
+      <button class="tab" data-tab="issues">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <span>Issues</span>
+        <span class="badge" data-badge="issues">0</span>
+      </button>
+      <button class="tab active" data-tab="flows">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        <span>Flows</span>
+        <span class="badge" data-badge="flows">0</span>
+      </button>
+      <button class="tab" data-tab="components">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        <span>Components</span>
+        <span class="badge" data-badge="components">0</span>
+      </button>
+      <button class="tab" data-tab="warnings">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        <span>Warnings</span>
+        <span class="badge" data-badge="warnings">0</span>
+      </button>
+    </nav>
+
+    <div class="sidebar-search">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="search" id="searchInput" placeholder="Search…" />
+      <span class="kbd">/</span>
+    </div>
+
+    <div class="meta-card" id="metaCard" hidden>
+      <div class="meta-row">
+        <div class="meta-label">Test</div>
+        <div class="meta-value" id="metaTest" title=""></div>
+      </div>
+      <div class="meta-row">
+        <div class="meta-label">Config</div>
+        <div class="meta-value" id="metaConfig"></div>
+      </div>
+      <div class="meta-row">
+        <div class="meta-label">Duration</div>
+        <div class="meta-value" id="metaDuration"></div>
+      </div>
+      <div class="meta-row">
+        <div class="meta-label">Components</div>
+        <div class="meta-value" id="metaComponents"></div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main content -->
+  <main class="content" id="content">
+    <!-- Overview -->
+    <section class="view" data-view="overview">
+      <header class="view-header">
+        <div>
+          <h2>Overview</h2>
+          <p class="view-sub">Test summary at a glance</p>
+        </div>
+      </header>
+      <div class="view-body" id="overviewBody"></div>
+    </section>
+
+    <!-- Issues -->
+    <section class="view hidden" data-view="issues">
+      <header class="view-header">
+        <div>
+          <h2>Issues</h2>
+          <p class="view-sub">Verdict failures, regressions & component-level fails</p>
+        </div>
+        <div class="view-toolbar">
+          <div class="seg">
+            <button class="seg-btn active" data-issues-filter="all">All</button>
+            <button class="seg-btn" data-issues-filter="CRITICAL">Critical</button>
+            <button class="seg-btn" data-issues-filter="HIGH">High</button>
+            <button class="seg-btn" data-issues-filter="MEDIUM">Medium</button>
+          </div>
+        </div>
+      </header>
+      <div class="view-body" id="issuesBody"></div>
+    </section>
+
+    <!-- Flows -->
+    <section class="view" data-view="flows">
+      <header class="view-header">
+        <div>
+          <h2>Flows</h2>
+          <p class="view-sub">Declared at testcase setup &mdash; validated by logs</p>
+        </div>
+        <div class="view-toolbar">
+          <div class="seg">
+            <button class="seg-btn active" data-flows-filter="all">All</button>
+            <button class="seg-btn" data-flows-filter="validated">Validated</button>
+            <button class="seg-btn" data-flows-filter="missing">Missing</button>
+          </div>
+        </div>
+      </header>
+      <div class="view-body" id="flowsBody"></div>
+    </section>
+
+    <!-- Components -->
+    <section class="view hidden" data-view="components">
+      <header class="view-header">
+        <div>
+          <h2>Components</h2>
+          <p class="view-sub">Per-component state machines, ports &amp; lifetime</p>
+        </div>
+        <div class="view-toolbar">
+          <div class="seg">
+            <button class="seg-btn active" data-components-sort="activity">By activity</button>
+            <button class="seg-btn" data-components-sort="name">By name</button>
+            <button class="seg-btn" data-components-sort="frames">By frames</button>
+          </div>
+        </div>
+      </header>
+      <div class="view-body" id="componentsBody"></div>
+    </section>
+
+    <!-- Warnings -->
+    <section class="view hidden" data-view="warnings">
+      <header class="view-header">
+        <div>
+          <h2>Log warnings</h2>
+          <p class="view-sub">Plugin / connector pllg WRN/ERR signals (collapsed by template)</p>
+        </div>
+        <div class="view-toolbar">
+          <div class="seg">
+            <button class="seg-btn active" data-warnings-level="all">All</button>
+            <button class="seg-btn" data-warnings-level="ERR">Errors</button>
+            <button class="seg-btn" data-warnings-level="WRN">Warnings</button>
+          </div>
+        </div>
+      </header>
+      <div class="view-body" id="warningsBody"></div>
+    </section>
+  </main>
+
+  <!-- Drawer -->
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <header class="drawer-header" id="drawerHeader"></header>
+    <div class="drawer-body" id="drawerBody"></div>
+  </aside>
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+</div>
+
+<!-- =================================================================== -->
+<!-- EMPTY STATE                                                         -->
+<!-- =================================================================== -->
+<div class="empty-state" id="emptyState">
+  <div class="empty-card" id="dropzone">
+    <div class="empty-icon">
+      <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+        <polyline points="14 2 14 8 20 8"/>
+        <line x1="12" y1="18" x2="12" y2="12"/>
+        <polyline points="9 15 12 12 15 15"/>
+      </svg>
+    </div>
+    <h2>Drop a diagnostics file</h2>
+    <p>Or load <code>&lt;base&gt;_diagnostics.json</code> and (optionally) <code>&lt;base&gt;_frames.json</code> from your <code>output_*</code> directory.</p>
+    <button class="btn-primary btn-large" id="emptyLoadBtn">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+      Choose files
+    </button>
+    <div class="empty-hints">
+      <div class="hint"><span class="kbd">/</span> Search</div>
+      <div class="hint"><span class="kbd">1</span>&hairsp;–&hairsp;<span class="kbd">5</span> Switch tabs</div>
+      <div class="hint"><span class="kbd">j</span>&hairsp;<span class="kbd">k</span> Navigate</div>
+      <div class="hint"><span class="kbd">Esc</span> Close drawer</div>
+    </div>
+  </div>
+</div>
+
+<!-- Toast container -->
+<div class="toast-container" id="toastContainer"></div>
+
+<script src="app.js"></script>
+</body>
+</html>

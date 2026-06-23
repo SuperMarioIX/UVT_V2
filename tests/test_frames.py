@@ -1,0 +1,52 @@
+# tests/test_frames.py
+
+from src.engine import process_events
+from src.frames import build_frames_summary
+from src.models import LIFECYCLE_TO_STATE
+
+
+def test_frames_have_mixed_states_not_only_operating():
+    lines = [
+        "20251110T172801.489274|cocr|MTC=/home/k3/K3_ROOT/C_Test/OM_K3/src/pit_oam/components/MBtsomMtcComponentsSetup.ttcn3:177|NOKIA_CPRI_RADIO_1|alive",
+        "20251110T172802.152148|cost|NOKIA_CPRI_RADIO_1=/home/k3/K3_ROOT/C_Test/OM_K3/src/common/components/MNokiaCpriRadio.ttcn3:61|MNokiaCpriRadio.f_setup",
+        "20251110T172810.753279|dtac|NOKIA_CPRI_RADIO_1=/home/k3/K3_ROOT/C_Test/OM_K3/src/common/components/MRp1Component.ttcn3:149|MRp1Component.a_handleSwInventoryReq()",
+        "20251110T172826.761494|ptqu|NOKIA_CPRI_RADIO_1=/home/k3/K3_ROOT/C_Test/OM_K3/src/common/components/MNokiaCpriRadio.ttcn3:1457|IP.mNokiaCpriRadioPort[0]|message(value=SackInterface.SApiInetDhcpLeaseInd:{leasedAddress:='3139322E3136382E3235332E32313600'O,relayGwAddress:='3139322E3136382E3235332E31333300'O,clientMacAddress:='D4EFCD1EA0AE'O,clientId:='313A44343A45463A43443A31453A41303A414500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'O,clientClassSpecificData:='323A330000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'O,clientClassName:='4E4F4B4941525031000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'O},sender=MNokiaCpriRadio.CNokiaCpriRadio:NOKIA_CPRI_RADIO_1(running),timestamp=27.218911)",
+        "20251110T172802.197232|cofi|NOKIA_CPRI_RADIO_1|none",
+    ]
+
+    registry, skipped = process_events(lines, strict=True)
+    assert skipped == 0
+
+    frames_payload = build_frames_summary(registry)
+    assert "NOKIA_CPRI_RADIO_1" in frames_payload
+    frames = frames_payload["NOKIA_CPRI_RADIO_1"]
+    assert len(frames) >= 2
+
+    states = {frame["State"] for frame in frames.values()}
+
+    # 1) We must NOT have a situation where the only state is OPERATING
+    assert not (len(states) == 1 and "OPERATING" in states)
+
+    # 2) There should be at least one lifecycle-derived state
+    lifecycle_states = set(LIFECYCLE_TO_STATE.values())
+    assert states & lifecycle_states  # intersection non-empty
+
+
+def test_dtac_plateau_creates_two_frames_first_and_last():
+    lines = [
+        "20251110T172802.152148|cost|NOKIA_CPRI_RADIO_1=/home/k3/K3_ROOT/C_Test/OM_K3/src/common/components/MNokiaCpriRadio.ttcn3:61|MNokiaCpriRadio.f_setup",
+        "20251110T172826.761594|dtac|NOKIA_CPRI_RADIO_1=/home/k3/K3_ROOT/C_Test/OM_K3/src/common/components/MNokiaCpriRadio.ttcn3:1463|MNokiaCpriRadio.a_api2DhcpLeaseInd()",
+        "20251110T172827.059296|dtac|NOKIA_CPRI_RADIO_1=/home/k3/K3_ROOT/C_Test/OM_K3/src/common/components/MRp1Component.ttcn3:432|MRp1Component.a_adetActions()"
+        "20251110T172826.761494|ptqu|NOKIA_CPRI_RADIO_1=/home/k3/K3_ROOT/C_Test/OM_K3/src/common/components/MNokiaCpriRadio.ttcn3:1457|IP.mNokiaCpriRadioPort[0]|message(value=SackInterface.SApiInetDhcpLeaseInd:{leasedAddress:='3139322E3136382E3235332E32313600'O,relayGwAddress:='3139322E3136382E3235332E31333300'O,clientMacAddress:='D4EFCD1EA0AE'O,clientId:='313A44343A45463A43443A31453A41303A414500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'O,clientClassSpecificData:='323A330000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'O,clientClassName:='4E4F4B4941525031000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'O},sender=MNokiaCpriRadio.CNokiaCpriRadio:NOKIA_CPRI_RADIO_1(running),timestamp=27.218911)",
+    ]
+    registry, _ = process_events(lines, strict=True)
+    frames_payload = build_frames_summary(registry)
+    frames = frames_payload["NOKIA_CPRI_RADIO_1"]
+
+    dtac_frames = [
+        (name, f)
+        for name, f in frames.items()
+        if f["State"] == "COMPONENT_ACTIVATING_DEFAULTS"
+    ]
+    # Should be at most 2 frames representing the plateau
+    assert 1 <= len(dtac_frames) <= 2
