@@ -1,0 +1,2332 @@
+{
+  "verdict": {
+    "test_name": "SBTS_N_Fault1911ForAffectedPipeAndRfRecovery.test",
+    "global_verdict": "error",
+    "tcfi_at": "2026-05-10T20:28:59.072970",
+    "passed": false,
+    "summary": {
+      "total_issues": 2,
+      "by_severity": {
+        "CRITICAL": 2
+      },
+      "by_kind": {
+        "component_verdict_fail": 1,
+        "global_verdict_fail": 1
+      }
+    },
+    "component_verdicts": {
+      "MTC": "error",
+      "ENVIRONMENT": "none",
+      "INIT": "none",
+      "RESET": "none",
+      "SELFTEST": "none",
+      "ADET": "none",
+      "ETH": "none",
+      "IP": "none",
+      "IP-FHNET": "none",
+      "LED": "none",
+      "ALARM_EAC": "none",
+      "FAN": "none",
+      "HWCTRL": "none",
+      "SUP": "none",
+      "ICOM": "none",
+      "SUM": "none",
+      "OPT": "none",
+      "SRIO": "none",
+      "CPRI": "none",
+      "ROUTING": "none",
+      "SFP": "none",
+      "BBTRACE": "none",
+      "TRBL": "none",
+      "FLASH": "none",
+      "AA_SYS_TIME": "none",
+      "AA_SYSCOM_GW": "none",
+      "LOM": "none",
+      "FM_CLIENT": "none",
+      "BM_SIMULATOR": "none",
+      "BM_IMS_CLIENT": "pass",
+      "TASSU": "none",
+      "PMMEAS": "none",
+      "TCC": "none",
+      "TPL": "none",
+      "NETACT": "none",
+      "ONAP_CLIENT": "none",
+      "POWER": "none",
+      "NC_CLIENT": "none",
+      "APIGW": "none",
+      "BLACKBOX": "none",
+      "BBCUTIL": "none",
+      "ENB_LTE": "none",
+      "ENB_LTE_SRIO": "none",
+      "NOKIA_CPRI_RADIO_1": "pass",
+      "NOKIA_CPRI_FILTER_1": "none",
+      "SUP_XEON_SLAVE": "none",
+      "INIT_XEON_SLAVE": "none",
+      "AACONFIG_1021": "none",
+      "LOM_ABIL1": "none",
+      "BBS_ABIL1": "none",
+      "CPRI_ABIL1": "none",
+      "IP_ABIL1": "none",
+      "SFP_ABIL1": "none",
+      "SUP_ABIL1": "none",
+      "SUP_SLAVE_ABIL1": "none",
+      "CCS_SICFTPABIL1": "none",
+      "L1_TRACE_ABIL1": "none",
+      "L2PS_TRACE_ABIL1": "none",
+      "LONER_ABIL1": "none",
+      "FLASH_ABIL1": "none",
+      "AACONFIG_1230": "none",
+      "INIT_ABIL1": "none",
+      "AACONFIG_1240": "none",
+      "AACONFIG_1250": "none",
+      "AACONFIG_UPLANE_0": "none",
+      "AACONFIG_UPLANE_1": "none",
+      "CP_RT": "none",
+      "CP_NB": "none",
+      "CP_NRT": "none",
+      "LOG": "none",
+      "LOG_FSP1": "none",
+      "AA_STARTUP_FCT": "none",
+      "AA_STARTUP_FSP_1": "none"
+    },
+    "transitions": [
+      {
+        "ts": "2026-05-10T20:23:24.434328",
+        "component": "MTC",
+        "from_verdict": "none",
+        "to_verdict": "pass",
+        "source": "MBtsomMtcSetup.ttcn3:72",
+        "raw_line": "20260510T202324.434328|setv|MTC=/var/fpwork/mciobanu/merge_conflict/new_ctest-clasical/ctest-classical/C_Test/OM_K3/src/pit_oam/components/MBtsomMtcSetup.ttcn3:72|none|pass\n"
+      },
+      {
+        "ts": "2026-05-10T20:23:55.440849",
+        "component": "BM_IMS_CLIENT",
+        "from_verdict": "none",
+        "to_verdict": "pass",
+        "source": "StartupTestsCommon.ttcn3:428",
+        "raw_line": "20260510T202355.440849|setv|BM_IMS_CLIENT=/var/fpwork/mciobanu/merge_conflict/new_ctest-clasical/ctest-classical/C_Test/OM_K3/src/pit_oam/functions/StartupTestsCommon.ttcn3:428|none|pass\n"
+      },
+      {
+        "ts": "2026-05-10T20:23:55.616722",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "from_verdict": "none",
+        "to_verdict": "pass",
+        "source": "FaultTest_Common.ttcn3:389",
+        "raw_line": "20260510T202355.616722|setv|NOKIA_CPRI_RADIO_1=/var/fpwork/mciobanu/merge_conflict/new_ctest-clasical/ctest-classical/C_Test/OM_K3/src/pit_oam/functions/FaultTest_Common.ttcn3:389|none|pass\n"
+      },
+      {
+        "ts": "2026-05-10T20:23:55.717254",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "from_verdict": "pass",
+        "to_verdict": "pass",
+        "source": "FaultTest_Common.ttcn3:389",
+        "raw_line": "20260510T202355.717254|setv|NOKIA_CPRI_RADIO_1=/var/fpwork/mciobanu/merge_conflict/new_ctest-clasical/ctest-classical/C_Test/OM_K3/src/pit_oam/functions/FaultTest_Common.ttcn3:389|pass|pass\n"
+      },
+      {
+        "ts": "2026-05-10T20:23:55.817508",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "from_verdict": "pass",
+        "to_verdict": "pass",
+        "source": "FaultTest_Common.ttcn3:389",
+        "raw_line": "20260510T202355.817508|setv|NOKIA_CPRI_RADIO_1=/var/fpwork/mciobanu/merge_conflict/new_ctest-clasical/ctest-classical/C_Test/OM_K3/src/pit_oam/functions/FaultTest_Common.ttcn3:389|pass|pass\n"
+      },
+      {
+        "ts": "2026-05-10T20:23:55.918167",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "from_verdict": "pass",
+        "to_verdict": "pass",
+        "source": "FaultTest_Common.ttcn3:389",
+        "raw_line": "20260510T202355.918167|setv|NOKIA_CPRI_RADIO_1=/var/fpwork/mciobanu/merge_conflict/new_ctest-clasical/ctest-classical/C_Test/OM_K3/src/pit_oam/functions/FaultTest_Common.ttcn3:389|pass|pass\n"
+      }
+    ],
+    "issues": [
+      {
+        "severity": "CRITICAL",
+        "kind": "component_verdict_fail",
+        "ts": "",
+        "message": "Component MTC finished with verdict 'error'.",
+        "component": "MTC",
+        "source": null,
+        "from_verdict": null,
+        "to_verdict": "error",
+        "test_name": "SBTS_N_Fault1911ForAffectedPipeAndRfRecovery.test"
+      },
+      {
+        "severity": "CRITICAL",
+        "kind": "global_verdict_fail",
+        "ts": "2026-05-10T20:28:59.072970",
+        "message": "Testcase finished with verdict 'error'.",
+        "component": null,
+        "source": null,
+        "from_verdict": null,
+        "to_verdict": "error",
+        "test_name": "SBTS_N_Fault1911ForAffectedPipeAndRfRecovery.test"
+      }
+    ]
+  },
+  "flows": {
+    "test_name": "SBTS_N_Fault1911ForAffectedPipeAndRfRecovery.test",
+    "config": "SBTS_N_ASIK_ABIL_AEQV",
+    "summary": {
+      "declared": 22,
+      "validated": 9,
+      "missing": 13,
+      "all_validated": false
+    },
+    "results": [
+      {
+        "index": 1,
+        "kind": "TC flow",
+        "message": "BTSOM initialized",
+        "declared_at": "2026-05-10T20:23:17.594136",
+        "validated": true,
+        "validation_count": 1,
+        "expected_count": 1,
+        "first_validated_at": "2026-05-10T20:23:54.953646",
+        "validating_component": "BM_IMS_CLIENT",
+        "validating_location": "MBmMapIms.ttcn3:208",
+        "all_validation_ts": [
+          "2026-05-10T20:23:20.688631"
+        ]
+      },
+      {
+        "index": 1,
+        "kind": "Startup flow",
+        "message": "NRBTS OperationalState changed to 'onAir'",
+        "declared_at": "2026-05-10T20:23:17.594163",
+        "validated": true,
+        "validation_count": 1,
+        "expected_count": 1,
+        "first_validated_at": "2026-05-10T20:23:54.953646",
+        "validating_component": "BM_IMS_CLIENT",
+        "validating_location": "MBmMapIms.ttcn3:208",
+        "all_validation_ts": [
+          "2026-05-10T20:23:54.953646"
+        ]
+      },
+      {
+        "index": 2,
+        "kind": "TC flow",
+        "message": "Ccs and components started defaults",
+        "declared_at": "2026-05-10T20:23:17.594143",
+        "validated": true,
+        "validation_count": 1,
+        "expected_count": 1,
+        "first_validated_at": "2026-05-10T20:23:24.424448",
+        "validating_component": "MTC",
+        "validating_location": "MBtsomMtcSetup.ttcn3:68",
+        "all_validation_ts": [
+          "2026-05-10T20:23:24.424448"
+        ]
+      },
+      {
+        "index": 3,
+        "kind": "TC flow",
+        "message": "BTSOM Started",
+        "declared_at": "2026-05-10T20:23:17.594159",
+        "validated": true,
+        "validation_count": 1,
+        "expected_count": 1,
+        "first_validated_at": "2026-05-10T20:23:24.475122",
+        "validating_component": "MTC",
+        "validating_location": "MBtsomMtcSetup.ttcn3:120",
+        "all_validation_ts": [
+          "2026-05-10T20:23:24.475122"
+        ]
+      },
+      {
+        "index": 4,
+        "kind": "TC flow",
+        "message": "Bts on air",
+        "declared_at": "2026-05-10T20:23:17.594167",
+        "validated": true,
+        "validation_count": 1,
+        "expected_count": 2,
+        "first_validated_at": "2026-05-10T20:23:55.016072",
+        "validating_component": "BM_IMS_CLIENT",
+        "validating_location": "StartupTestsCommon.ttcn3:494",
+        "all_validation_ts": [
+          "2026-05-10T20:23:55.016072"
+        ]
+      },
+      {
+        "index": 5,
+        "kind": "TC flow",
+        "message": "All RATs on air",
+        "declared_at": "2026-05-10T20:23:17.594171",
+        "validated": true,
+        "validation_count": 1,
+        "expected_count": 2,
+        "first_validated_at": "2026-05-10T20:23:55.016077",
+        "validating_component": "BM_IMS_CLIENT",
+        "validating_location": "StartupTestsCommon.ttcn3:495",
+        "all_validation_ts": [
+          "2026-05-10T20:23:55.016077"
+        ]
+      },
+      {
+        "index": 6,
+        "kind": "TC flow",
+        "message": "All Cells on air",
+        "declared_at": "2026-05-10T20:23:17.594175",
+        "validated": true,
+        "validation_count": 1,
+        "expected_count": 3,
+        "first_validated_at": "2026-05-10T20:23:55.299165",
+        "validating_component": "BM_IMS_CLIENT",
+        "validating_location": "StartupTestsCommon.ttcn3:424",
+        "all_validation_ts": [
+          "2026-05-10T20:23:55.299165"
+        ]
+      },
+      {
+        "index": 7,
+        "kind": "TC flow",
+        "message": "NokiaCpriRadio sent AlarmNotif",
+        "declared_at": "2026-05-10T20:23:17.594179",
+        "validated": true,
+        "validation_count": 4,
+        "expected_count": 1,
+        "first_validated_at": "2026-05-10T20:23:55.599280",
+        "validating_component": "NOKIA_CPRI_RADIO_1",
+        "validating_location": "FaultTest_Common.ttcn3:383",
+        "all_validation_ts": [
+          "2026-05-10T20:23:55.599280",
+          "2026-05-10T20:23:55.619770",
+          "2026-05-10T20:23:55.719994",
+          "2026-05-10T20:23:55.820465"
+        ]
+      },
+      {
+        "index": 8,
+        "kind": "TC flow",
+        "message": "NokiaCpriRadio received NotificationAck",
+        "declared_at": "2026-05-10T20:23:17.594182",
+        "validated": true,
+        "validation_count": 4,
+        "expected_count": 1,
+        "first_validated_at": "2026-05-10T20:23:55.616691",
+        "validating_component": "NOKIA_CPRI_RADIO_1",
+        "validating_location": "FaultTest_Common.ttcn3:388",
+        "all_validation_ts": [
+          "2026-05-10T20:23:55.616691",
+          "2026-05-10T20:23:55.717221",
+          "2026-05-10T20:23:55.817454",
+          "2026-05-10T20:23:55.918131"
+        ]
+      },
+      {
+        "index": 9,
+        "kind": "TC flow",
+        "message": "Minor ALARM 7115 for fault 1911 has been created",
+        "declared_at": "2026-05-10T20:23:17.594186",
+        "validated": false,
+        "validation_count": 0,
+        "expected_count": 2,
+        "first_validated_at": null,
+        "validating_component": null,
+        "validating_location": null,
+        "all_validation_ts": []
+      },
+      {
+        "index": 10,
+        "kind": "TC flow",
+        "message": "Recovery triggered by fault creation",
+        "declared_at": "2026-05-10T20:23:17.594190",
+        "validated": false,
+        "validation_count": 0,
+        "expected_count": 2,
+        "first_validated_at": null,
+        "validating_component": null,
+        "validating_location": null,
+        "all_validation_ts": []
+      },
+      {
+        "index": 11,
+        "kind": "TC flow",
+        "message": "Fault Creation RadioReset performed",
+        "declared_at": "2026-05-10T20:23:17.594195",
+        "validated": false,
+        "validation_count": 0,
+        "expected_count": 2,
+        "first_validated_at": null,
+        "validating_component": null,
+        "validating_location": null,
+        "all_validation_ts": []
+      },
+      {
+        "index": 12,
+        "kind": "TC flow",
+        "message": "Alarm for Fault 1911 deleted",
+        "declared_at": "2026-05-10T20:23:17.594199",
+        "validated": false,
+        "validation_count": 0,
+        "expected_count": 2,
+        "first_validated_at": null,
+        "validating_component": null,
+        "validating_location": null,
+        "all_validation_ts": []
+      },
+      {
+        "index": 13,
+        "kind": "TC flow",
+        "message": "All Cells on air",
+        "declared_at": "2026-05-10T20:23:17.594203",
+        "validated": false,
+        "validation_count": 1,
+        "expected_count": 3,
+        "first_validated_at": null,
+        "validating_component": null,
+        "validating_location": null,
+        "all_validation_ts": [
+          "2026-05-10T20:23:55.299165"
+        ]
+      },
+      {
+        "index": 14,
+        "kind": "TC flow",
+        "message": "Trigger fault 1911 second time",
+        "declared_at": "2026-05-10T20:23:17.594208",
+        "validated": false,
+        "validation_count": 0,
+        "expected_count": 1,
+        "first_validated_at": null,
+        "validating_component": null,
+        "validating_location": null,
+        "all_validation_ts": []
+      },
+      {
+        "index": 15,
+        "kind": "TC flow",
+        "message": "Minor ALARM 7115 for fault 1911 has been created",
+        "declared_at": "2026-05-10T20:23:17.594212",
+        "validated": false,
+        "validation_count": 0,
+        "expected_count": 2,
+        "first_validated_at": null,
+        "validating_component": null,
+        "validating_location": null,
+        "all_validation_ts": []
+      },
+      {
+        "index": 16,
+        "kind": "TC flow",
+        "message": "Recovery triggered by fault creation",
+        "declared_at": "2026-05-10T20:23:17.594217",
+        "validated": false,
+        "validation_count": 0,
+        "expected_count": 2,
+        "first_validated_at": null,
+        "validating_component": null,
+        "validating_location": null,
+        "all_validation_ts": []
+      },
+      {
+        "index": 17,
+        "kind": "TC flow",
+        "message": "Fault Creation RadioReset performed",
+        "declared_at": "2026-05-10T20:23:17.594221",
+        "validated": false,
+        "validation_count": 0,
+        "expected_count": 2,
+        "first_validated_at": null,
+        "validating_component": null,
+        "validating_location": null,
+        "all_validation_ts": []
+      },
+      {
+        "index": 18,
+        "kind": "TC flow",
+        "message": "Alarm for Fault 1911 deleted",
+        "declared_at": "2026-05-10T20:23:17.594225",
+        "validated": false,
+        "validation_count": 0,
+        "expected_count": 2,
+        "first_validated_at": null,
+        "validating_component": null,
+        "validating_location": null,
+        "all_validation_ts": []
+      },
+      {
+        "index": 19,
+        "kind": "TC flow",
+        "message": "Bts on air",
+        "declared_at": "2026-05-10T20:23:17.594230",
+        "validated": false,
+        "validation_count": 1,
+        "expected_count": 2,
+        "first_validated_at": null,
+        "validating_component": null,
+        "validating_location": null,
+        "all_validation_ts": [
+          "2026-05-10T20:23:55.016072"
+        ]
+      },
+      {
+        "index": 20,
+        "kind": "TC flow",
+        "message": "All RATs on air",
+        "declared_at": "2026-05-10T20:23:17.594236",
+        "validated": false,
+        "validation_count": 1,
+        "expected_count": 2,
+        "first_validated_at": null,
+        "validating_component": null,
+        "validating_location": null,
+        "all_validation_ts": [
+          "2026-05-10T20:23:55.016077"
+        ]
+      },
+      {
+        "index": 21,
+        "kind": "TC flow",
+        "message": "All Cells on air",
+        "declared_at": "2026-05-10T20:23:17.594240",
+        "validated": false,
+        "validation_count": 1,
+        "expected_count": 3,
+        "first_validated_at": null,
+        "validating_component": null,
+        "validating_location": null,
+        "all_validation_ts": [
+          "2026-05-10T20:23:55.299165"
+        ]
+      }
+    ],
+    "validations": [
+      {
+        "kind": "TC flow",
+        "message": "blockingCommandIO rc \"\"0",
+        "validated_at": "2026-05-10T20:23:17.594091",
+        "component": "k3r",
+        "source": null
+      },
+      {
+        "kind": "TC flow",
+        "message": "blockingCommand rc \"\"0",
+        "validated_at": "2026-05-10T20:23:18.279391",
+        "component": "MTC",
+        "source": "ConfigurationUtilities.ttcn3:498"
+      },
+      {
+        "kind": "TC flow",
+        "message": "blockingCommand rc \"\"0",
+        "validated_at": "2026-05-10T20:23:18.281066",
+        "component": "MTC",
+        "source": "ConfigurationUtilities.ttcn3:501"
+      },
+      {
+        "kind": "Startup flow",
+        "message": "FileSystem setup done",
+        "validated_at": "2026-05-10T20:23:18.281107",
+        "component": "MTC",
+        "source": "ConfigurationUtilities.ttcn3:334"
+      },
+      {
+        "kind": "Startup flow",
+        "message": "TargetBD preparation done",
+        "validated_at": "2026-05-10T20:23:18.957420",
+        "component": "MTC",
+        "source": "ConfigurationUtilities.ttcn3:425"
+      },
+      {
+        "kind": "Startup flow",
+        "message": "Legacy SWConfig flags added",
+        "validated_at": "2026-05-10T20:23:19.188070",
+        "component": "MTC",
+        "source": "ConfigurationUtilities.ttcn3:109"
+      },
+      {
+        "kind": "Startup flow",
+        "message": "Legacy SWConfig flags added",
+        "validated_at": "2026-05-10T20:23:19.226264",
+        "component": "MTC",
+        "source": "ConfigurationUtilities.ttcn3:109"
+      },
+      {
+        "kind": "Startup flow",
+        "message": "Mtc components created",
+        "validated_at": "2026-05-10T20:23:19.249900",
+        "component": "MTC",
+        "source": "MBtsomMtcComponentsSetup.ttcn3:196"
+      },
+      {
+        "kind": "Startup flow",
+        "message": "Mtc env ports connected",
+        "validated_at": "2026-05-10T20:23:19.250121",
+        "component": "MTC",
+        "source": "MBtsomMtcComponentsSetup.ttcn3:835"
+      },
+      {
+        "kind": "Startup flow",
+        "message": "Mtc components f_setup() executed",
+        "validated_at": "2026-05-10T20:23:20.325149",
+        "component": "MTC",
+        "source": "MBtsomMtcComponentsSetup.ttcn3:1577"
+      },
+      {
+        "kind": "Startup flow",
+        "message": "MtcSmod components created",
+        "validated_at": "2026-05-10T20:23:20.326141",
+        "component": "MTC",
+        "source": "MBtsomMtcSmodComponentsSetup.ttcn3:207"
+      },
+      {
+        "kind": "Startup flow",
+        "message": "MtcSmod env ports connected",
+        "validated_at": "2026-05-10T20:23:20.326248",
+        "component": "MTC",
+        "source": "MBtsomMtcSmodComponentsSetup.ttcn3:333"
+      },
+      {
+        "kind": "Startup flow",
+        "message": "MtcSmod comm ports connected",
+        "validated_at": "2026-05-10T20:23:20.326276",
+        "component": "MTC",
+        "source": "MBtsomMtcSmodComponentsSetup.ttcn3:353"
+      },
+      {
+        "kind": "Startup flow",
+        "message": "MtcSmod components f_setup() executed",
+        "validated_at": "2026-05-10T20:23:20.357257",
+        "component": "MTC",
+        "source": "MBtsomMtcSmodComponentsSetup.ttcn3:1304"
+      },
+      {
+        "kind": "Startup flow",
+        "message": "Mtc comm ports connected",
+        "validated_at": "2026-05-10T20:23:20.554638",
+        "component": "MTC",
+        "source": "MBtsomMtcComponentsSetup.ttcn3:725"
+      },
+      {
+        "kind": "Startup flow",
+        "message": "Mtc Hwapi ports connected to used radios",
+        "validated_at": "2026-05-10T20:23:20.554703",
+        "component": "MTC",
+        "source": "MBtsomMtcComponentsSetup.ttcn3:668"
+      },
+      {
+        "kind": "Startup flow",
+        "message": "MtcRat components created",
+        "validated_at": "2026-05-10T20:23:20.621542",
+        "component": "MTC",
+        "source": "MBtsomMtcRatComponentsSetup.ttcn3:85"
+      },
+      {
+        "kind": "Startup flow",
+        "message": "MtcRat ports connected and f_setup() executed",
+        "validated_at": "2026-05-10T20:23:20.671410",
+        "component": "MTC",
+        "source": "MBtsomMtcRatComponentsSetup.ttcn3:102"
+      },
+      {
+        "kind": "TC flow",
+        "message": "BTSOM initialized",
+        "validated_at": "2026-05-10T20:23:20.688631",
+        "component": "MTC",
+        "source": "MBtsomMtcSetup.ttcn3:215"
+      },
+      {
+        "kind": "Startup flow",
+        "message": "SWConfig flags added",
+        "validated_at": "2026-05-10T20:23:20.724177",
+        "component": "MTC",
+        "source": "StartupTestsCommon.ttcn3:227"
+      },
+      {
+        "kind": "Startup flow",
+        "message": "Mtc components mapping done",
+        "validated_at": "2026-05-10T20:23:24.313511",
+        "component": "MTC",
+        "source": "MBtsomMtcComponentsSetup.ttcn3:443"
+      },
+      {
+        "kind": "Startup flow",
+        "message": "MtcSmod components mapping done",
+        "validated_at": "2026-05-10T20:23:24.314335",
+        "component": "MTC",
+        "source": "MBtsomMtcSmodComponentsSetup.ttcn3:971"
+      },
+      {
+        "kind": "Startup flow",
+        "message": "Mtc components started with PowerOff",
+        "validated_at": "2026-05-10T20:23:24.390712",
+        "component": "MTC",
+        "source": "MBtsomMtcComponentsSetup.ttcn3:1759"
+      },
+      {
+        "kind": "Startup flow",
+        "message": "MtcSmod components started with PowerOff",
+        "validated_at": "2026-05-10T20:23:24.392498",
+        "component": "MTC",
+        "source": "MBtsomMtcSmodComponentsSetup.ttcn3:1419"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Ccs and components started defaults",
+        "validated_at": "2026-05-10T20:23:24.424448",
+        "component": "MTC",
+        "source": "MBtsomMtcSetup.ttcn3:68"
+      },
+      {
+        "kind": "TC flow",
+        "message": "BTSOM Started",
+        "validated_at": "2026-05-10T20:23:24.475122",
+        "component": "MTC",
+        "source": "MBtsomMtcSetup.ttcn3:120"
+      },
+      {
+        "kind": "TC flow",
+        "message": "SApi3AutodetDomainInd has been send",
+        "validated_at": "2026-05-10T20:23:25.670331",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:253"
+      },
+      {
+        "kind": "TC flow",
+        "message": "SApi5AutodetUnitInd has been send",
+        "validated_at": "2026-05-10T20:23:25.670858",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:351"
+      },
+      {
+        "kind": "TC flow",
+        "message": "SApi3AutodetDomainInd has been send",
+        "validated_at": "2026-05-10T20:23:25.671372",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:253"
+      },
+      {
+        "kind": "TC flow",
+        "message": "SApi3AutodetDomainInd has been send",
+        "validated_at": "2026-05-10T20:23:25.671918",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:253"
+      },
+      {
+        "kind": "TC flow",
+        "message": "HWAPI - SApiAutodetCpuInd sent with state EAdetState_UnInitialized",
+        "validated_at": "2026-05-10T20:23:25.672210",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:586"
+      },
+      {
+        "kind": "TC flow",
+        "message": "HWAPI - SApiAutodetCpuInd sent with state EAdetState_UnInitialized",
+        "validated_at": "2026-05-10T20:23:25.672317",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:586"
+      },
+      {
+        "kind": "TC flow",
+        "message": "SApi5AutodetUnitInd has been send",
+        "validated_at": "2026-05-10T20:23:25.672673",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:351"
+      },
+      {
+        "kind": "TC flow",
+        "message": "HWAPI - SApiAutodetCpuInd sent with state EAdetState_UnInitialized",
+        "validated_at": "2026-05-10T20:23:25.672886",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:586"
+      },
+      {
+        "kind": "TC flow",
+        "message": "HWAPI - SApiAutodetCpuInd sent with state EAdetState_UnInitialized",
+        "validated_at": "2026-05-10T20:23:25.672967",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:586"
+      },
+      {
+        "kind": "TC flow",
+        "message": "SApi5AutodetUnitInd has been send",
+        "validated_at": "2026-05-10T20:23:25.673304",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:351"
+      },
+      {
+        "kind": "TC flow",
+        "message": "HwApiAutodetection - Unplugged indication for BBMOD has been sent",
+        "validated_at": "2026-05-10T20:23:25.673312",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:574"
+      },
+      {
+        "kind": "TC flow",
+        "message": "HWAPI - SApiAutodetCpuInd sent with state EAdetState_Ready",
+        "validated_at": "2026-05-10T20:23:25.673506",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:586"
+      },
+      {
+        "kind": "TC flow",
+        "message": "HWAPI - SApiAutodetCpuInd sent with state EAdetState_Ready",
+        "validated_at": "2026-05-10T20:23:25.673596",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:586"
+      },
+      {
+        "kind": "TC flow",
+        "message": "SApi5AutodetUnitInd has been send",
+        "validated_at": "2026-05-10T20:23:25.673937",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:351"
+      },
+      {
+        "kind": "TC flow",
+        "message": "HwApiAutodetection - Unplugged indication for BBMOD has been sent",
+        "validated_at": "2026-05-10T20:23:25.673946",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:574"
+      },
+      {
+        "kind": "TC flow",
+        "message": "HWAPI - SApiAutodetCpuInd sent with state EAdetState_UnInitialized",
+        "validated_at": "2026-05-10T20:23:25.674148",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:586"
+      },
+      {
+        "kind": "TC flow",
+        "message": "HWAPI - SApiAutodetCpuInd sent with state EAdetState_UnInitialized",
+        "validated_at": "2026-05-10T20:23:25.674235",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:586"
+      },
+      {
+        "kind": "TC flow",
+        "message": "HWAPI - SApiAutodetCpuInd sent with state EAdetState_UnInitialized",
+        "validated_at": "2026-05-10T20:23:25.674317",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:586"
+      },
+      {
+        "kind": "TC flow",
+        "message": "SApi5AutodetUnitInd has been send",
+        "validated_at": "2026-05-10T20:23:25.674742",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:351"
+      },
+      {
+        "kind": "TC flow",
+        "message": "HwApiAutodetection - Unplugged indication for BBMOD has been sent",
+        "validated_at": "2026-05-10T20:23:25.674752",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:574"
+      },
+      {
+        "kind": "TC flow",
+        "message": "HWAPI - SApiAutodetCpuInd sent with state EAdetState_Ready",
+        "validated_at": "2026-05-10T20:23:25.674962",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:586"
+      },
+      {
+        "kind": "TC flow",
+        "message": "HWAPI - SApiAutodetCpuInd sent with state EAdetState_Ready",
+        "validated_at": "2026-05-10T20:23:25.675046",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:586"
+      },
+      {
+        "kind": "TC flow",
+        "message": "HWAPI - SApiAutodetCpuInd sent with state EAdetState_Ready",
+        "validated_at": "2026-05-10T20:23:25.675126",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:586"
+      },
+      {
+        "kind": "TC flow",
+        "message": "SApi5AutodetUnitInd has been send",
+        "validated_at": "2026-05-10T20:23:25.675506",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:351"
+      },
+      {
+        "kind": "TC flow",
+        "message": "HwApiAutodetection - Unplugged indication for BBMOD has been sent",
+        "validated_at": "2026-05-10T20:23:25.675517",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:574"
+      },
+      {
+        "kind": "TC flow",
+        "message": "SApi3AutodetDomainInd has been send",
+        "validated_at": "2026-05-10T20:23:26.797528",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:253"
+      },
+      {
+        "kind": "TC flow",
+        "message": "HWAPI - SApiAutodetCpuInd sent with state EAdetState_UnInitialized",
+        "validated_at": "2026-05-10T20:23:26.797769",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:586"
+      },
+      {
+        "kind": "TC flow",
+        "message": "HWAPI - SApiAutodetCpuInd sent with state EAdetState_UnInitialized",
+        "validated_at": "2026-05-10T20:23:26.797863",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:586"
+      },
+      {
+        "kind": "TC flow",
+        "message": "SApi5AutodetUnitInd has been send",
+        "validated_at": "2026-05-10T20:23:26.798227",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:351"
+      },
+      {
+        "kind": "TC flow",
+        "message": "HWAPI - SApiAutodetCpuInd sent with state EAdetState_UnInitialized",
+        "validated_at": "2026-05-10T20:23:26.798403",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:586"
+      },
+      {
+        "kind": "TC flow",
+        "message": "HWAPI - SApiAutodetCpuInd sent with state EAdetState_UnInitialized",
+        "validated_at": "2026-05-10T20:23:26.798478",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:586"
+      },
+      {
+        "kind": "TC flow",
+        "message": "SApi5AutodetUnitInd has been send",
+        "validated_at": "2026-05-10T20:23:26.798822",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:351"
+      },
+      {
+        "kind": "TC flow",
+        "message": "HwApiAutodetection - Unplugged indication for BBMOD has been sent",
+        "validated_at": "2026-05-10T20:23:26.798831",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:574"
+      },
+      {
+        "kind": "TC flow",
+        "message": "HWAPI - SApiAutodetCpuInd sent with state EAdetState_Ready",
+        "validated_at": "2026-05-10T20:23:26.799030",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:586"
+      },
+      {
+        "kind": "TC flow",
+        "message": "HWAPI - SApiAutodetCpuInd sent with state EAdetState_Ready",
+        "validated_at": "2026-05-10T20:23:26.799105",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:586"
+      },
+      {
+        "kind": "TC flow",
+        "message": "SApi5AutodetUnitInd has been send",
+        "validated_at": "2026-05-10T20:23:26.799414",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:351"
+      },
+      {
+        "kind": "TC flow",
+        "message": "HwApiAutodetection - Unplugged indication for BBMOD has been sent",
+        "validated_at": "2026-05-10T20:23:26.799422",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:574"
+      },
+      {
+        "kind": "TC flow",
+        "message": "HWAPI - SApiAutodetCpuInd sent with state EAdetState_UnInitialized",
+        "validated_at": "2026-05-10T20:23:26.799635",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:586"
+      },
+      {
+        "kind": "TC flow",
+        "message": "HWAPI - SApiAutodetCpuInd sent with state EAdetState_UnInitialized",
+        "validated_at": "2026-05-10T20:23:26.799713",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:586"
+      },
+      {
+        "kind": "TC flow",
+        "message": "HWAPI - SApiAutodetCpuInd sent with state EAdetState_UnInitialized",
+        "validated_at": "2026-05-10T20:23:26.799791",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:586"
+      },
+      {
+        "kind": "TC flow",
+        "message": "SApi5AutodetUnitInd has been send",
+        "validated_at": "2026-05-10T20:23:26.800186",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:351"
+      },
+      {
+        "kind": "TC flow",
+        "message": "HwApiAutodetection - Unplugged indication for BBMOD has been sent",
+        "validated_at": "2026-05-10T20:23:26.800196",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:574"
+      },
+      {
+        "kind": "TC flow",
+        "message": "HWAPI - SApiAutodetCpuInd sent with state EAdetState_Ready",
+        "validated_at": "2026-05-10T20:23:26.800375",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:586"
+      },
+      {
+        "kind": "TC flow",
+        "message": "HWAPI - SApiAutodetCpuInd sent with state EAdetState_Ready",
+        "validated_at": "2026-05-10T20:23:26.800448",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:586"
+      },
+      {
+        "kind": "TC flow",
+        "message": "HWAPI - SApiAutodetCpuInd sent with state EAdetState_Ready",
+        "validated_at": "2026-05-10T20:23:26.800543",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:586"
+      },
+      {
+        "kind": "TC flow",
+        "message": "SApi5AutodetUnitInd has been send",
+        "validated_at": "2026-05-10T20:23:26.800911",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:351"
+      },
+      {
+        "kind": "TC flow",
+        "message": "HwApiAutodetection - Unplugged indication for BBMOD has been sent",
+        "validated_at": "2026-05-10T20:23:26.800921",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:574"
+      },
+      {
+        "kind": "TC flow",
+        "message": "SApi3AutodetDomainInd has been send",
+        "validated_at": "2026-05-10T20:23:26.801430",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:253"
+      },
+      {
+        "kind": "TC flow",
+        "message": "SApi5AutodetUnitInd has been send",
+        "validated_at": "2026-05-10T20:23:26.801786",
+        "component": "ADET",
+        "source": "MHwApiAutodetection.ttcn3:351"
+      },
+      {
+        "kind": "TC flow",
+        "message": "ethif::Proxy__setConfigChangeHandler has been handled",
+        "validated_at": "2026-05-10T20:23:27.113577",
+        "component": "TPL",
+        "source": "MTplNetwork.ttcn3:185"
+      },
+      {
+        "kind": "TC flow",
+        "message": "ethif::Proxy__setSfpDynamicParamConfigChangeHandler has been handled",
+        "validated_at": "2026-05-10T20:23:27.125523",
+        "component": "TPL",
+        "source": "MTplNetwork.ttcn3:236"
+      },
+      {
+        "kind": "TC flow",
+        "message": "TpiLagSetConfigChangeHandlerResponse has received",
+        "validated_at": "2026-05-10T20:23:27.199206",
+        "component": "TPL",
+        "source": "MTplLag.ttcn3:27"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Port has been set up with connector label TpiEthConnectorLabel_LMP",
+        "validated_at": "2026-05-10T20:23:27.334124",
+        "component": "TPL",
+        "source": "MTplNetwork.ttcn3:518"
+      },
+      {
+        "kind": "TC flow",
+        "message": "ethport__setupPort has been handled",
+        "validated_at": "2026-05-10T20:23:27.334129",
+        "component": "TPL",
+        "source": "MTplNetwork.ttcn3:519"
+      },
+      {
+        "kind": "TC flow",
+        "message": "ethif::Proxy__getInterfaces for port TpiEthConnectorLabel_EIF1 has been handled",
+        "validated_at": "2026-05-10T20:23:27.417914",
+        "component": "TPL",
+        "source": "MTplNetwork.ttcn3:369"
+      },
+      {
+        "kind": "TC flow",
+        "message": "ethif::Proxy__getPortConfig has been handled",
+        "validated_at": "2026-05-10T20:23:27.430711",
+        "component": "TPL",
+        "source": "MTplNetwork.ttcn3:435"
+      },
+      {
+        "kind": "TC flow",
+        "message": "ethif::Proxy__getPortConfig has been handled",
+        "validated_at": "2026-05-10T20:23:27.438212",
+        "component": "TPL",
+        "source": "MTplNetwork.ttcn3:435"
+      },
+      {
+        "kind": "TC flow",
+        "message": "ethif::Proxy__getInterfaces for port TpiEthConnectorLabel_EIF1 has been handled",
+        "validated_at": "2026-05-10T20:23:27.530754",
+        "component": "TPL",
+        "source": "MTplNetwork.ttcn3:369"
+      },
+      {
+        "kind": "TC flow",
+        "message": "TpiLldpsetupLldpConfigRequest has received",
+        "validated_at": "2026-05-10T20:23:27.694345",
+        "component": "TPL",
+        "source": "MTplLldp.ttcn3:14"
+      },
+      {
+        "kind": "TC flow",
+        "message": "fiveg__getStreamingEmQueueId handled",
+        "validated_at": "2026-05-10T20:23:27.721868",
+        "component": "TPL",
+        "source": "MTplFiveg.ttcn3:191"
+      },
+      {
+        "kind": "TC flow",
+        "message": "fiveg__getDataTrafficEmQueueId handled",
+        "validated_at": "2026-05-10T20:23:27.730503",
+        "component": "TPL",
+        "source": "MTplFiveg.ttcn3:174"
+      },
+      {
+        "kind": "TC flow",
+        "message": "SApiBlackboxStoreFileResp was sent",
+        "validated_at": "2026-05-10T20:23:27.889339",
+        "component": "BLACKBOX",
+        "source": "MHwApiBlackBox.ttcn3:65"
+      },
+      {
+        "kind": "TC flow",
+        "message": "TpiIpsecSetEmergencyBypassEventHandler has been handled",
+        "validated_at": "2026-05-10T20:23:27.912655",
+        "component": "TPL",
+        "source": "MTplIpAddr.ttcn3:475"
+      },
+      {
+        "kind": "TC flow",
+        "message": "TpiLldpSetConfigChangeHandlerRequest has received",
+        "validated_at": "2026-05-10T20:23:27.992848",
+        "component": "TPL",
+        "source": "MTplLldp.ttcn3:47"
+      },
+      {
+        "kind": "TC flow",
+        "message": "TpiSetCertificateUpdateTimeMismatchEventHandlerRequest has been received",
+        "validated_at": "2026-05-10T20:23:28.154164",
+        "component": "TPL",
+        "source": "MTplCertm.ttcn3:678"
+      },
+      {
+        "kind": "TC flow",
+        "message": "TpiSetCertificateUpdateTimeMismatchEventHandlerResponse has been sent",
+        "validated_at": "2026-05-10T20:23:28.159084",
+        "component": "TPL",
+        "source": "MTplCertm.ttcn3:682"
+      },
+      {
+        "kind": "TC flow",
+        "message": "TpiSetCertificateUpdateTimeMismatchEventHandlerRequest has been received",
+        "validated_at": "2026-05-10T20:23:28.166467",
+        "component": "TPL",
+        "source": "MTplCertm.ttcn3:678"
+      },
+      {
+        "kind": "TC flow",
+        "message": "TpiSetCertificateUpdateTimeMismatchEventHandlerResponse has been sent",
+        "validated_at": "2026-05-10T20:23:28.172128",
+        "component": "TPL",
+        "source": "MTplCertm.ttcn3:682"
+      },
+      {
+        "kind": "TC flow",
+        "message": "TpiSetCertificateUpdateTimeMismatchEventHandlerReceiveRequest has been received",
+        "validated_at": "2026-05-10T20:23:28.172831",
+        "component": "TPL",
+        "source": "MTplCertm.ttcn3:689"
+      },
+      {
+        "kind": "TC flow",
+        "message": "TpiXpifSetConfigChangeHandlerReceiveResponse send to set xpLinkStatus as Available",
+        "validated_at": "2026-05-10T20:23:28.269329",
+        "component": "TPL",
+        "source": "MTplXpIf.ttcn3:87"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Port has been set up with connector label TpiEthConnectorLabel_EIF1",
+        "validated_at": "2026-05-10T20:23:28.359411",
+        "component": "TPL",
+        "source": "MTplNetwork.ttcn3:518"
+      },
+      {
+        "kind": "TC flow",
+        "message": "ethport__setupPort has been handled",
+        "validated_at": "2026-05-10T20:23:28.359419",
+        "component": "TPL",
+        "source": "MTplNetwork.ttcn3:519"
+      },
+      {
+        "kind": "TC flow",
+        "message": "TpiLldpsetupLldpConfigRequest has received",
+        "validated_at": "2026-05-10T20:23:29.485239",
+        "component": "TPL",
+        "source": "MTplLldp.ttcn3:14"
+      },
+      {
+        "kind": "TC flow",
+        "message": "bridge__setupBridge has been handled",
+        "validated_at": "2026-05-10T20:23:29.493407",
+        "component": "TPL",
+        "source": "MTplBridge.ttcn3:62"
+      },
+      {
+        "kind": "TC flow",
+        "message": "bridge__setupBridgePort has been handled",
+        "validated_at": "2026-05-10T20:23:29.501001",
+        "component": "TPL",
+        "source": "MTplBridge.ttcn3:75"
+      },
+      {
+        "kind": "TC flow",
+        "message": "bridge__setupBridgePort has been handled",
+        "validated_at": "2026-05-10T20:23:29.516875",
+        "component": "TPL",
+        "source": "MTplBridge.ttcn3:75"
+      },
+      {
+        "kind": "TC flow",
+        "message": "TpiPnacSetAuthenticationModeRequest has received",
+        "validated_at": "2026-05-10T20:23:29.538897",
+        "component": "TPL",
+        "source": "MTplPnac.ttcn3:102"
+      },
+      {
+        "kind": "TC flow",
+        "message": "TpiPnacSetAuthenticationModeRequest has received",
+        "validated_at": "2026-05-10T20:23:29.551076",
+        "component": "TPL",
+        "source": "MTplPnac.ttcn3:14"
+      },
+      {
+        "kind": "TC flow",
+        "message": "ip__addIpAddress has been handled",
+        "validated_at": "2026-05-10T20:23:29.562460",
+        "component": "TPL",
+        "source": "MTplIpAddr.ttcn3:647"
+      },
+      {
+        "kind": "TC flow",
+        "message": "FilterRule for M-Plane has been added",
+        "validated_at": "2026-05-10T20:23:29.576973",
+        "component": "TPL",
+        "source": "MTplNetwork.ttcn3:533"
+      },
+      {
+        "kind": "TC flow",
+        "message": "QosRule for M-Plane has been added",
+        "validated_at": "2026-05-10T20:23:29.629743",
+        "component": "TPL",
+        "source": "MTplNetwork.ttcn3:610"
+      },
+      {
+        "kind": "TC flow",
+        "message": "QosRule for M-Plane has been added",
+        "validated_at": "2026-05-10T20:23:29.637893",
+        "component": "TPL",
+        "source": "MTplNetwork.ttcn3:610"
+      },
+      {
+        "kind": "TC flow",
+        "message": "FilterRule for M-Plane has been added",
+        "validated_at": "2026-05-10T20:23:29.645938",
+        "component": "TPL",
+        "source": "MTplNetwork.ttcn3:533"
+      },
+      {
+        "kind": "TC flow",
+        "message": "QosSetLowPriority for M-Plane Dscp",
+        "validated_at": "2026-05-10T20:23:30.712110",
+        "component": "TPL",
+        "source": "MTplIpAddr.ttcn3:681"
+      },
+      {
+        "kind": "TC flow",
+        "message": "FilterRule for M-Plane has been added",
+        "validated_at": "2026-05-10T20:23:30.723447",
+        "component": "TPL",
+        "source": "MTplNetwork.ttcn3:533"
+      },
+      {
+        "kind": "TC flow",
+        "message": "FilterRule for M-Plane has been added",
+        "validated_at": "2026-05-10T20:23:30.731817",
+        "component": "TPL",
+        "source": "MTplNetwork.ttcn3:533"
+      },
+      {
+        "kind": "TC flow",
+        "message": "QosRule for M-Plane has been added",
+        "validated_at": "2026-05-10T20:23:30.740010",
+        "component": "TPL",
+        "source": "MTplNetwork.ttcn3:610"
+      },
+      {
+        "kind": "TC flow",
+        "message": "QosRule for M-Plane has been added",
+        "validated_at": "2026-05-10T20:23:30.748335",
+        "component": "TPL",
+        "source": "MTplNetwork.ttcn3:610"
+      },
+      {
+        "kind": "TC flow",
+        "message": "FilterRule for M-Plane has been added",
+        "validated_at": "2026-05-10T20:23:32.897360",
+        "component": "TPL",
+        "source": "MTplNetwork.ttcn3:533"
+      },
+      {
+        "kind": "TC flow",
+        "message": "QosRule for M-Plane has been added",
+        "validated_at": "2026-05-10T20:23:32.907084",
+        "component": "TPL",
+        "source": "MTplNetwork.ttcn3:610"
+      },
+      {
+        "kind": "TC flow",
+        "message": "QosRule for M-Plane has been added",
+        "validated_at": "2026-05-10T20:23:33.926287",
+        "component": "TPL",
+        "source": "MTplNetwork.ttcn3:610"
+      },
+      {
+        "kind": "TC flow",
+        "message": "QosRule for M-Plane has been added",
+        "validated_at": "2026-05-10T20:23:33.959137",
+        "component": "TPL",
+        "source": "MTplNetwork.ttcn3:610"
+      },
+      {
+        "kind": "TC flow",
+        "message": "vnMode is EVirtNodeMode_FHNET",
+        "validated_at": "2026-05-10T20:23:33.987621",
+        "component": "SUP",
+        "source": "MHwApiSupervisor.ttcn3:1068"
+      },
+      {
+        "kind": "TC flow",
+        "message": "setup CRL config request has been received",
+        "validated_at": "2026-05-10T20:23:34.044863",
+        "component": "TPL",
+        "source": "MTplCertm.ttcn3:227"
+      },
+      {
+        "kind": "TC flow",
+        "message": "setup CRL config request has been received",
+        "validated_at": "2026-05-10T20:23:34.061426",
+        "component": "TPL",
+        "source": "MTplCertm.ttcn3:227"
+      },
+      {
+        "kind": "TC flow",
+        "message": "ip__addIpAddress has been handled",
+        "validated_at": "2026-05-10T20:23:34.079299",
+        "component": "TPL",
+        "source": "MTplIpAddr.ttcn3:647"
+      },
+      {
+        "kind": "TC flow",
+        "message": "vnMode is EVirtNodeMode_NRT",
+        "validated_at": "2026-05-10T20:23:34.391058",
+        "component": "SUP",
+        "source": "MHwApiSupervisor.ttcn3:1068"
+      },
+      {
+        "kind": "TC flow",
+        "message": "vnMode is EVirtNodeMode_NRT",
+        "validated_at": "2026-05-10T20:23:34.392692",
+        "component": "SUP",
+        "source": "MHwApiSupervisor.ttcn3:1068"
+      },
+      {
+        "kind": "TC flow",
+        "message": "vnMode is EVirtNodeMode_FHNET",
+        "validated_at": "2026-05-10T20:23:34.394092",
+        "component": "SUP",
+        "source": "MHwApiSupervisor.ttcn3:1068"
+      },
+      {
+        "kind": "TC flow",
+        "message": "vnMode is EVirtNodeMode_NRT",
+        "validated_at": "2026-05-10T20:23:34.395920",
+        "component": "SUP_XEON_SLAVE",
+        "source": "MHwApiSupervisor.ttcn3:1068"
+      },
+      {
+        "kind": "TC flow",
+        "message": "vnMode is EVirtNodeMode_NRT",
+        "validated_at": "2026-05-10T20:23:34.397306",
+        "component": "SUP_XEON_SLAVE",
+        "source": "MHwApiSupervisor.ttcn3:1068"
+      },
+      {
+        "kind": "TC flow",
+        "message": "vnMode is EVirtNodeMode_NRT",
+        "validated_at": "2026-05-10T20:23:34.398450",
+        "component": "SUP_XEON_SLAVE",
+        "source": "MHwApiSupervisor.ttcn3:1068"
+      },
+      {
+        "kind": "TC flow",
+        "message": "vnMode is EVirtNodeMode_NRT",
+        "validated_at": "2026-05-10T20:23:34.399558",
+        "component": "SUP_XEON_SLAVE",
+        "source": "MHwApiSupervisor.ttcn3:1068"
+      },
+      {
+        "kind": "TC flow",
+        "message": "vnMode is EVirtNodeMode_NRT",
+        "validated_at": "2026-05-10T20:23:34.400687",
+        "component": "SUP_XEON_SLAVE",
+        "source": "MHwApiSupervisor.ttcn3:1068"
+      },
+      {
+        "kind": "TC flow",
+        "message": "vnMode is EVirtNodeMode_NRT",
+        "validated_at": "2026-05-10T20:23:34.401814",
+        "component": "SUP_XEON_SLAVE",
+        "source": "MHwApiSupervisor.ttcn3:1068"
+      },
+      {
+        "kind": "TC flow",
+        "message": "SetupIpsecConfiguration has been handled",
+        "validated_at": "2026-05-10T20:23:35.138149",
+        "component": "TPL",
+        "source": "MTplIpAddr.ttcn3:1424"
+      },
+      {
+        "kind": "TC flow",
+        "message": "FilterRule for M-Plane has been added",
+        "validated_at": "2026-05-10T20:23:36.161151",
+        "component": "TPL",
+        "source": "MTplNetwork.ttcn3:533"
+      },
+      {
+        "kind": "TC flow",
+        "message": "SApiBlackboxRegisterFileReq was sent",
+        "validated_at": "2026-05-10T20:23:36.622587",
+        "component": "BLACKBOX",
+        "source": "MHwApiBlackBox.ttcn3:78"
+      },
+      {
+        "kind": "TC flow",
+        "message": "FilterRule for M-Plane has been added",
+        "validated_at": "2026-05-10T20:23:37.202943",
+        "component": "TPL",
+        "source": "MTplNetwork.ttcn3:533"
+      },
+      {
+        "kind": "TC flow",
+        "message": "QosRule for M-Plane has been added",
+        "validated_at": "2026-05-10T20:23:37.211821",
+        "component": "TPL",
+        "source": "MTplNetwork.ttcn3:610"
+      },
+      {
+        "kind": "TC flow",
+        "message": "FilterRule for M-Plane has been added",
+        "validated_at": "2026-05-10T20:23:37.222288",
+        "component": "TPL",
+        "source": "MTplNetwork.ttcn3:533"
+      },
+      {
+        "kind": "TC flow",
+        "message": "FilterRule for M-Plane has been added",
+        "validated_at": "2026-05-10T20:23:37.230919",
+        "component": "TPL",
+        "source": "MTplNetwork.ttcn3:533"
+      },
+      {
+        "kind": "TC flow",
+        "message": "QosRule for M-Plane has been added",
+        "validated_at": "2026-05-10T20:23:37.239438",
+        "component": "TPL",
+        "source": "MTplNetwork.ttcn3:610"
+      },
+      {
+        "kind": "TC flow",
+        "message": "QosRule for M-Plane has been added",
+        "validated_at": "2026-05-10T20:23:37.247880",
+        "component": "TPL",
+        "source": "MTplNetwork.ttcn3:610"
+      },
+      {
+        "kind": "TC flow",
+        "message": "fiveg__setupUplaneIpConfig handled",
+        "validated_at": "2026-05-10T20:23:37.258711",
+        "component": "TPL",
+        "source": "MTplFiveg.ttcn3:16"
+      },
+      {
+        "kind": "TC flow",
+        "message": "have enabled VSB Reception on CPRI Link",
+        "validated_at": "2026-05-10T20:23:37.380398",
+        "component": "CPRI_ABIL1",
+        "source": "MHwApiCpri.ttcn3:1809"
+      },
+      {
+        "kind": "TC flow",
+        "message": "have enabled VSB Reception on CPRI Link",
+        "validated_at": "2026-05-10T20:23:37.380971",
+        "component": "CPRI_ABIL1",
+        "source": "MHwApiCpri.ttcn3:1809"
+      },
+      {
+        "kind": "TC flow",
+        "message": "have enabled VSB Generation on CPRI Link",
+        "validated_at": "2026-05-10T20:23:37.382009",
+        "component": "CPRI_ABIL1",
+        "source": "MHwApiCpri.ttcn3:1936"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Master ABIL CPRI L1Cpri_CpriVsbDataInd called",
+        "validated_at": "2026-05-10T20:23:37.385660",
+        "component": "CPRI_ABIL1",
+        "source": "MHwApiCpri.ttcn3:1764"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Slave L1Cpri_CpriVsbDataInd called",
+        "validated_at": "2026-05-10T20:23:37.390573",
+        "component": "CPRI_ABIL1",
+        "source": "MHwApiCpri.ttcn3:1773"
+      },
+      {
+        "kind": "TC flow",
+        "message": "have enabled VSB Generation on CPRI Link",
+        "validated_at": "2026-05-10T20:23:37.391907",
+        "component": "CPRI_ABIL1",
+        "source": "MHwApiCpri.ttcn3:1936"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Master ABIL CPRI L1Cpri_CpriVsbDataInd called",
+        "validated_at": "2026-05-10T20:23:37.401111",
+        "component": "CPRI_ABIL1",
+        "source": "MHwApiCpri.ttcn3:1764"
+      },
+      {
+        "kind": "TC flow",
+        "message": "have enabled VSB Generation on CPRI Link",
+        "validated_at": "2026-05-10T20:23:37.409644",
+        "component": "CPRI_ABIL1",
+        "source": "MHwApiCpri.ttcn3:1936"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Master ABIL CPRI L1Cpri_CpriVsbDataInd called",
+        "validated_at": "2026-05-10T20:23:37.415454",
+        "component": "CPRI_ABIL1",
+        "source": "MHwApiCpri.ttcn3:1764"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Module received ModuleReadyAck",
+        "validated_at": "2026-05-10T20:23:40.615447",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MRp1Component.ttcn3:627"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Received features update for Radio_1",
+        "validated_at": "2026-05-10T20:23:40.630138",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MNokiaCpriRadio.ttcn3:1726"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Module received ModifyParameterReq",
+        "validated_at": "2026-05-10T20:23:40.699445",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MRp1Component.ttcn3:2148"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Module received ModifyParameterReq",
+        "validated_at": "2026-05-10T20:23:41.100616",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MRp1Component.ttcn3:2148"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Module received ModifyParameterReq",
+        "validated_at": "2026-05-10T20:23:41.603493",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MRp1Component.ttcn3:2148"
+      },
+      {
+        "kind": "TC flow",
+        "message": "vnMode is EVirtNodeMode_NRT",
+        "validated_at": "2026-05-10T20:23:41.706461",
+        "component": "SUP_ABIL1",
+        "source": "MHwApiSupervisor.ttcn3:1068"
+      },
+      {
+        "kind": "TC flow",
+        "message": "vnMode is EVirtNodeMode_RT",
+        "validated_at": "2026-05-10T20:23:41.707010",
+        "component": "SUP_SLAVE_ABIL1",
+        "source": "MHwApiSupervisor.ttcn3:1068"
+      },
+      {
+        "kind": "TC flow",
+        "message": "vnMode is EVirtNodeMode_RT",
+        "validated_at": "2026-05-10T20:23:41.709630",
+        "component": "SUP_ABIL1",
+        "source": "MHwApiSupervisor.ttcn3:1068"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Module received SwInventoryReq",
+        "validated_at": "2026-05-10T20:23:41.802235",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MRp1Component.ttcn3:2160"
+      },
+      {
+        "kind": "TC flow",
+        "message": "ModifyParameterReq subscribing to Volatiles caught by a Nokia CPRI radio",
+        "validated_at": "2026-05-10T20:23:41.900769",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MNokiaCpriRadio.ttcn3:2289"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Module received ModifyParameterReq",
+        "validated_at": "2026-05-10T20:23:42.002439",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MRp1Component.ttcn3:2148"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Module received ModifyParameterReq",
+        "validated_at": "2026-05-10T20:23:42.008931",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MRp1Component.ttcn3:2148"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Module received ModifyParameterReq",
+        "validated_at": "2026-05-10T20:23:42.201793",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MRp1Component.ttcn3:2148"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Module received ModifyParameterReq",
+        "validated_at": "2026-05-10T20:23:42.301336",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MRp1Component.ttcn3:2148"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Module received ModifyParameterReq",
+        "validated_at": "2026-05-10T20:23:42.401419",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MRp1Component.ttcn3:2148"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Module received ModifyParameterReq for subscription of Module",
+        "validated_at": "2026-05-10T20:23:42.501898",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MNokiaCpriRadio.ttcn3:2186"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Module received ModifyParameterReq",
+        "validated_at": "2026-05-10T20:23:42.602820",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MRp1Component.ttcn3:2148"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Module received ModifyParameterReq",
+        "validated_at": "2026-05-10T20:23:42.703111",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MRp1Component.ttcn3:2148"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Module received ModifyParameterReq",
+        "validated_at": "2026-05-10T20:23:42.715605",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MRp1Component.ttcn3:2148"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Module received ModifyParameterReq",
+        "validated_at": "2026-05-10T20:23:42.718766",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MRp1Component.ttcn3:2148"
+      },
+      {
+        "kind": "TC flow",
+        "message": "CpCm_DeploymentCompleteAck sent.",
+        "validated_at": "2026-05-10T20:23:42.908472",
+        "component": "CP_NB",
+        "source": "MCpNbCm.ttcn3:238"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Module received ModifyParameterReq",
+        "validated_at": "2026-05-10T20:23:43.003256",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MRp1Component.ttcn3:2148"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Module received ModifyParameterReq",
+        "validated_at": "2026-05-10T20:23:43.103205",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MRp1Component.ttcn3:2148"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Module received ModifyParameterReq",
+        "validated_at": "2026-05-10T20:23:43.203206",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MRp1Component.ttcn3:2148"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Module received ModifyParameterReq",
+        "validated_at": "2026-05-10T20:23:43.403523",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MRp1Component.ttcn3:2148"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Received CpriPort subscribe for Radio_1",
+        "validated_at": "2026-05-10T20:23:43.406326",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MNokiaCpriRadio.ttcn3:1757"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Module received ModifyParameterReq",
+        "validated_at": "2026-05-10T20:23:43.610063",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MRp1Component.ttcn3:2148"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Module received ModifyParameterReq",
+        "validated_at": "2026-05-10T20:23:44.005761",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MRp1Component.ttcn3:2148"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Module received ModifyParameterReq",
+        "validated_at": "2026-05-10T20:23:44.205908",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MRp1Component.ttcn3:2148"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Received txArrays rxArrays subscribe request.",
+        "validated_at": "2026-05-10T20:23:44.306708",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MNokiaCpriRadio.ttcn3:3166"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Subscribe txArrays rxArrays response sent.",
+        "validated_at": "2026-05-10T20:23:44.313288",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MNokiaCpriRadio.ttcn3:3168"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Module received ModifyParameterReq",
+        "validated_at": "2026-05-10T20:23:44.406622",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MRp1Component.ttcn3:2148"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Module received ModifyParameterReq",
+        "validated_at": "2026-05-10T20:23:44.606595",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MRp1Component.ttcn3:2148"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Module received ModifyStateReq",
+        "validated_at": "2026-05-10T20:23:44.707096",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MRp1Component.ttcn3:2171"
+      },
+      {
+        "kind": "TC flow",
+        "message": "handling ModifyStateReq",
+        "validated_at": "2026-05-10T20:23:44.708158",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MRp1Component.ttcn3:2098"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Module received ModifyParameterReq",
+        "validated_at": "2026-05-10T20:23:44.811504",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MRp1Component.ttcn3:2148"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Module received ModifyParameterReq",
+        "validated_at": "2026-05-10T20:23:44.814910",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MRp1Component.ttcn3:2148"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Module received ModifyParameterReq",
+        "validated_at": "2026-05-10T20:23:44.818030",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MRp1Component.ttcn3:2148"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Module received ModifyParameterReq",
+        "validated_at": "2026-05-10T20:23:44.821354",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MRp1Component.ttcn3:2148"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Module received ModifyParameterReq",
+        "validated_at": "2026-05-10T20:23:44.824515",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MRp1Component.ttcn3:2148"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Module received ModifyParameterReq",
+        "validated_at": "2026-05-10T20:23:44.918976",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MRp1Component.ttcn3:2148"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Module received ModifyParameterReq",
+        "validated_at": "2026-05-10T20:23:44.924238",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MRp1Component.ttcn3:2148"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Module received ModifyParameterReq",
+        "validated_at": "2026-05-10T20:23:45.013012",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MRp1Component.ttcn3:2148"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Module received ModifyParameterReq",
+        "validated_at": "2026-05-10T20:23:45.809167",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MRp1Component.ttcn3:2148"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Module received ModifyParameterReq",
+        "validated_at": "2026-05-10T20:23:46.112247",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MRp1Component.ttcn3:2148"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Module received ModifyParameterReq",
+        "validated_at": "2026-05-10T20:23:46.130868",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MRp1Component.ttcn3:2148"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Module received ModifyParameterReq",
+        "validated_at": "2026-05-10T20:23:46.211452",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MRp1Component.ttcn3:2148"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Module received ModifyParameterReq",
+        "validated_at": "2026-05-10T20:23:46.311235",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MRp1Component.ttcn3:2148"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Module received ModifyParameterReq",
+        "validated_at": "2026-05-10T20:23:49.730328",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MRp1Component.ttcn3:2148"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Module received ModifyParameterReq",
+        "validated_at": "2026-05-10T20:23:49.817376",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MRp1Component.ttcn3:2148"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Module received ModifyParameterReq",
+        "validated_at": "2026-05-10T20:23:50.219659",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MRp1Component.ttcn3:2148"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Module received ModifyParameterReq",
+        "validated_at": "2026-05-10T20:23:50.738949",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MRp1Component.ttcn3:2148"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Module received ModifyParameterReq",
+        "validated_at": "2026-05-10T20:23:53.711405",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MRp1Component.ttcn3:2148"
+      },
+      {
+        "kind": "TC flow",
+        "message": "default handling for SApiHwCtrlEccCountersReq",
+        "validated_at": "2026-05-10T20:23:54.357656",
+        "component": "HWCTRL",
+        "source": "MHwApiHwCtrl.ttcn3:302"
+      },
+      {
+        "kind": "Startup flow",
+        "message": "NRBTS OperationalState changed to 'onAir'",
+        "validated_at": "2026-05-10T20:23:54.953646",
+        "component": "BM_IMS_CLIENT",
+        "source": "MBmMapIms.ttcn3:208"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Bts on air",
+        "validated_at": "2026-05-10T20:23:55.016072",
+        "component": "BM_IMS_CLIENT",
+        "source": "StartupTestsCommon.ttcn3:494"
+      },
+      {
+        "kind": "TC flow",
+        "message": "All RATs on air",
+        "validated_at": "2026-05-10T20:23:55.016077",
+        "component": "BM_IMS_CLIENT",
+        "source": "StartupTestsCommon.ttcn3:495"
+      },
+      {
+        "kind": "Startup flow",
+        "message": "All Cells on air",
+        "validated_at": "2026-05-10T20:23:55.299161",
+        "component": "BM_IMS_CLIENT",
+        "source": "StartupTestsCommon.ttcn3:423"
+      },
+      {
+        "kind": "TC flow",
+        "message": "All Cells on air",
+        "validated_at": "2026-05-10T20:23:55.299165",
+        "component": "BM_IMS_CLIENT",
+        "source": "StartupTestsCommon.ttcn3:424"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Setup Finished",
+        "validated_at": "2026-05-10T20:23:55.372911",
+        "component": "BM_IMS_CLIENT",
+        "source": "MBmMapIms.ttcn3:208"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Setup finished",
+        "validated_at": "2026-05-10T20:23:55.440810",
+        "component": "BM_IMS_CLIENT",
+        "source": "StartupTestsCommon.ttcn3:426"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Link login bundle file start.",
+        "validated_at": "2026-05-10T20:23:55.443231",
+        "component": "MTC",
+        "source": "MBtsomMtcScenarios.ttcn3:333"
+      },
+      {
+        "kind": "TC flow",
+        "message": "blockingCommand rc \"\"0",
+        "validated_at": "2026-05-10T20:23:55.445635",
+        "component": "MTC",
+        "source": "MBtsomMtcScenarios.ttcn3:347"
+      },
+      {
+        "kind": "TC flow",
+        "message": "blockingCommand rc \"\"0",
+        "validated_at": "2026-05-10T20:23:55.447384",
+        "component": "MTC",
+        "source": "MBtsomMtcScenarios.ttcn3:350"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Cp login bundle file done",
+        "validated_at": "2026-05-10T20:23:55.447390",
+        "component": "MTC",
+        "source": "MBtsomMtcScenarios.ttcn3:353"
+      },
+      {
+        "kind": "TC flow",
+        "message": "blockingCommand rc \"\"0",
+        "validated_at": "2026-05-10T20:23:55.449080",
+        "component": "MTC",
+        "source": "MBtsomMtcScenarios.ttcn3:355"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Cp pm.zip file done",
+        "validated_at": "2026-05-10T20:23:55.449085",
+        "component": "MTC",
+        "source": "MBtsomMtcScenarios.ttcn3:358"
+      },
+      {
+        "kind": "TC flow",
+        "message": "ISCA_CONFIGURATION_CHANGE_NOTIF received",
+        "validated_at": "2026-05-10T20:23:55.516595",
+        "component": "BM_IMS_CLIENT",
+        "source": "MBmMapIms.ttcn3:208"
+      },
+      {
+        "kind": "TC flow",
+        "message": "NokiaCpriRadio sent AlarmNotif",
+        "validated_at": "2026-05-10T20:23:55.599280",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "FaultTest_Common.ttcn3:383"
+      },
+      {
+        "kind": "TC flow",
+        "message": "NokiaCpriRadio received NotificationAck",
+        "validated_at": "2026-05-10T20:23:55.616691",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "FaultTest_Common.ttcn3:388"
+      },
+      {
+        "kind": "TC flow",
+        "message": "NokiaCpriRadio sent AlarmNotif",
+        "validated_at": "2026-05-10T20:23:55.619770",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "FaultTest_Common.ttcn3:383"
+      },
+      {
+        "kind": "TC flow",
+        "message": "NokiaCpriRadio received NotificationAck",
+        "validated_at": "2026-05-10T20:23:55.717221",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "FaultTest_Common.ttcn3:388"
+      },
+      {
+        "kind": "TC flow",
+        "message": "NokiaCpriRadio sent AlarmNotif",
+        "validated_at": "2026-05-10T20:23:55.719994",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "FaultTest_Common.ttcn3:383"
+      },
+      {
+        "kind": "TC flow",
+        "message": "NokiaCpriRadio received NotificationAck",
+        "validated_at": "2026-05-10T20:23:55.817454",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "FaultTest_Common.ttcn3:388"
+      },
+      {
+        "kind": "TC flow",
+        "message": "NokiaCpriRadio sent AlarmNotif",
+        "validated_at": "2026-05-10T20:23:55.820465",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "FaultTest_Common.ttcn3:383"
+      },
+      {
+        "kind": "TC flow",
+        "message": "NokiaCpriRadio received NotificationAck",
+        "validated_at": "2026-05-10T20:23:55.918131",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "FaultTest_Common.ttcn3:388"
+      },
+      {
+        "kind": "TC flow",
+        "message": "MNokiaCpriRadio ModuleReadyInd received",
+        "validated_at": "2026-05-10T20:24:05.615633",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MNokiaCpriRadio.ttcn3:2614"
+      },
+      {
+        "kind": "TC flow",
+        "message": "MNokiaCpriRadio ModuleReadyInd received",
+        "validated_at": "2026-05-10T20:24:10.615751",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MNokiaCpriRadio.ttcn3:2614"
+      },
+      {
+        "kind": "TC flow",
+        "message": "MNokiaCpriRadio ModuleReadyInd received",
+        "validated_at": "2026-05-10T20:24:15.825530",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MNokiaCpriRadio.ttcn3:2614"
+      },
+      {
+        "kind": "TC flow",
+        "message": "pnac__getCounters has been handled",
+        "validated_at": "2026-05-10T20:24:30.379599",
+        "component": "TPL",
+        "source": "MTplPnac.ttcn3:75"
+      },
+      {
+        "kind": "TC flow",
+        "message": "MNokiaCpriRadio ModuleReadyInd received",
+        "validated_at": "2026-05-10T20:24:35.934743",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MNokiaCpriRadio.ttcn3:2614"
+      },
+      {
+        "kind": "TC flow",
+        "message": "MNokiaCpriRadio ModuleReadyInd received",
+        "validated_at": "2026-05-10T20:24:55.943529",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MNokiaCpriRadio.ttcn3:2614"
+      },
+      {
+        "kind": "TC flow",
+        "message": "MNokiaCpriRadio ModuleReadyInd received",
+        "validated_at": "2026-05-10T20:25:15.852127",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MNokiaCpriRadio.ttcn3:2614"
+      },
+      {
+        "kind": "TC flow",
+        "message": "MNokiaCpriRadio ModuleReadyInd received",
+        "validated_at": "2026-05-10T20:25:35.961029",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MNokiaCpriRadio.ttcn3:2614"
+      },
+      {
+        "kind": "TC flow",
+        "message": "MNokiaCpriRadio ModuleReadyInd received",
+        "validated_at": "2026-05-10T20:25:55.970251",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MNokiaCpriRadio.ttcn3:2614"
+      },
+      {
+        "kind": "TC flow",
+        "message": "MNokiaCpriRadio ModuleReadyInd received",
+        "validated_at": "2026-05-10T20:26:15.879190",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MNokiaCpriRadio.ttcn3:2614"
+      },
+      {
+        "kind": "TC flow",
+        "message": "MNokiaCpriRadio ModuleReadyInd received",
+        "validated_at": "2026-05-10T20:26:35.987873",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MNokiaCpriRadio.ttcn3:2614"
+      },
+      {
+        "kind": "TC flow",
+        "message": "MNokiaCpriRadio ModuleReadyInd received",
+        "validated_at": "2026-05-10T20:26:55.996265",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MNokiaCpriRadio.ttcn3:2614"
+      },
+      {
+        "kind": "TC flow",
+        "message": "MNokiaCpriRadio ModuleReadyInd received",
+        "validated_at": "2026-05-10T20:27:15.905141",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MNokiaCpriRadio.ttcn3:2614"
+      },
+      {
+        "kind": "TC flow",
+        "message": "MNokiaCpriRadio ModuleReadyInd received",
+        "validated_at": "2026-05-10T20:27:36.013668",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MNokiaCpriRadio.ttcn3:2614"
+      },
+      {
+        "kind": "TC flow",
+        "message": "MNokiaCpriRadio ModuleReadyInd received",
+        "validated_at": "2026-05-10T20:27:56.021464",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MNokiaCpriRadio.ttcn3:2614"
+      },
+      {
+        "kind": "TC flow",
+        "message": "MNokiaCpriRadio ModuleReadyInd received",
+        "validated_at": "2026-05-10T20:28:15.930125",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MNokiaCpriRadio.ttcn3:2614"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Cprt_Cm_TestMeasurementReq received",
+        "validated_at": "2026-05-10T20:28:34.593526",
+        "component": "CP_RT",
+        "source": "MCpRtCm.ttcn3:704"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Cprt_Cm_TestMeasurementResp send with status Ok",
+        "validated_at": "2026-05-10T20:28:34.593699",
+        "component": "CP_RT",
+        "source": "MCpRtCm.ttcn3:449"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Cprt_Cm_DlTestMeasurementInd send",
+        "validated_at": "2026-05-10T20:28:34.593796",
+        "component": "CP_RT",
+        "source": "MCpRtCm.ttcn3:454"
+      },
+      {
+        "kind": "TC flow",
+        "message": "Cprt_Cm_UlTestMeasurementInd send",
+        "validated_at": "2026-05-10T20:28:34.593888",
+        "component": "CP_RT",
+        "source": "MCpRtCm.ttcn3:459"
+      },
+      {
+        "kind": "TC flow",
+        "message": "MNokiaCpriRadio ModuleReadyInd received",
+        "validated_at": "2026-05-10T20:28:36.039033",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MNokiaCpriRadio.ttcn3:2614"
+      },
+      {
+        "kind": "TC flow",
+        "message": "MNokiaCpriRadio ModuleReadyInd received",
+        "validated_at": "2026-05-10T20:28:55.846962",
+        "component": "NOKIA_CPRI_RADIO_1",
+        "source": "MNokiaCpriRadio.ttcn3:2614"
+      }
+    ]
+  },
+  "log_warnings": {
+    "summary": {
+      "total_seen": 137,
+      "total_kept": 56,
+      "suppressed": 81,
+      "by_level": {
+        "WRN": 56
+      }
+    },
+    "items": [
+      {
+        "component": null,
+        "level": "WRN",
+        "module": "Rp1-Codec",
+        "message": "ATTENTION: number of children not matching between ttcn3 and xml for type ModifyParameterReq.managedObject[-].",
+        "count": 14,
+        "first_ts": "2026-05-10T20:23:41.601960",
+        "last_ts": "2026-05-10T20:23:50.737305",
+        "sample_source": null
+      },
+      {
+        "component": null,
+        "level": "WRN",
+        "module": "Rp1-Codec",
+        "message": "ATTENTION: number of children not matching between ttcn3 and xml for type ModifyParameterReq.",
+        "count": 14,
+        "first_ts": "2026-05-10T20:23:42.400204",
+        "last_ts": "2026-05-10T20:23:53.709723",
+        "sample_source": null
+      },
+      {
+        "component": null,
+        "level": "WRN",
+        "module": "Binary-Codec2",
+        "message": "ID_8008 in decoding-helper.cpp:131|int size truncated to 4 (greedy read)",
+        "count": 12,
+        "first_ts": "2026-05-10T20:23:27.836193",
+        "last_ts": "2026-05-10T20:23:27.893422",
+        "sample_source": null
+      },
+      {
+        "component": null,
+        "level": "WRN",
+        "module": "Rp1-Codec",
+        "message": "ATTENTION: number of children not matching between ttcn3 and xml for type RetrieveParameterReq.managedObject[-].",
+        "count": 9,
+        "first_ts": "2026-05-10T20:23:41.398737",
+        "last_ts": "2026-05-10T20:23:45.708012",
+        "sample_source": null
+      },
+      {
+        "component": null,
+        "level": "WRN",
+        "module": "Rp1-Codec",
+        "message": "ATTENTION: number of children not matching between ttcn3 and xml for type RetrieveParameterReq.",
+        "count": 4,
+        "first_ts": "2026-05-10T20:23:40.998776",
+        "last_ts": "2026-05-10T20:23:41.602335",
+        "sample_source": null
+      },
+      {
+        "component": null,
+        "level": "WRN",
+        "module": "SicSharedConnector",
+        "message": "Gateway #0|FCM_MESSAGE_RECEIVER|Dropping the received message because we're not registered.",
+        "count": 1,
+        "first_ts": "2026-05-10T20:28:59.015579",
+        "last_ts": "2026-05-10T20:28:59.015579",
+        "sample_source": null
+      },
+      {
+        "component": "INIT",
+        "level": "WRN",
+        "module": "BroadcastConnector",
+        "message": "ID_3002 in broadcast-connector.cpp:92|No route mapped to sicad 10110300!",
+        "count": 1,
+        "first_ts": "2026-05-10T20:28:58.957088",
+        "last_ts": "2026-05-10T20:28:58.957088",
+        "sample_source": null
+      },
+      {
+        "component": "TPL",
+        "level": "WRN",
+        "module": "JsonRPC-Connector",
+        "message": "Cannot find request associated with address '139637976838772'. Either the response was already sent or the id is invalid.",
+        "count": 1,
+        "first_ts": "2026-05-10T20:23:34.079292",
+        "last_ts": "2026-05-10T20:23:34.079292",
+        "sample_source": "MTplIpAddr.ttcn3:644"
+      }
+    ],
+    "whitelist_hits": {
+      "Use of deprecated contextName parameter": 3,
+      "default int size 4": 20,
+      "no entry for address": 58
+    }
+  }
+}
